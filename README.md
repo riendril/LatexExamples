@@ -1,8 +1,8 @@
 ## Info
  A PRETTY SIMPLE but powerful template for a CS style exercise containing:
- - tons of examples for
+ - examples for
    - including images
-   - equations
+   - writing equations and symbols
    - formatting
    - referencing
 - useful packages
