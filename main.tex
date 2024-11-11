@@ -7,10 +7,10 @@
 \newcommand{\mymatriclenum}{5154774}
 \newcommand{\partnername}{Leonard Rienks}
 \newcommand{\partnermatriclenum}{5154774}
-\newcommand{\lecture}{Irgendeine Vorlesung}
-\newcommand{\groupnum}{Meine Gruppe}
-\newcommand{\tutor}{Mein Tutor}
-\newcommand{\exercise}{Aufgabenblatt Nr. X}
+\newcommand{\lecture}{Some random lecture}
+\newcommand{\groupnum}{My group}
+\newcommand{\tutor}{My tutor}
+\newcommand{\exercise}{Exercise X}
 
 \newcommand{\mytitle}{\exercise}
 \newcommand{\mysubtitle}{\lecture}
@@ -75,7 +75,7 @@ pdfkeywords={}]
 % \fancyhead[EL]{} % E for even, O for odd to define different headers and footers for even and odd pages
 \rhead{\today}  % Define a header from the right
 \chead{\mytitle}
-\cfoot{Seite \thepage}  % Define a footing in the center
+\cfoot{Page \thepage}  % Define a footing in the center
 
 %%%%%%%%%% Language support %%%%%%%%%%
 \usepackage[ngerman]{babel}
@@ -165,7 +165,7 @@ pdfkeywords={}]
 % ACTUAL DOCUMENT (COPY WHAT YOU NEED)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Pre-Amble (usually worth to just copy)
+% Pre-Amble (usually worth to just copy)
 \begin{document}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
@@ -179,43 +179,43 @@ pdfkeywords={}]
 \newpage
 \setcounter{page}{1}
 
-\section{Organisation}
-\subsection{Auflistungen}
+\section{Organization}
+\subsection{Listings}
 \subsubsection{Itemize}
 \begin{itemize}
-    \item Macht einfach Punkte, schnell und unkompliziert
+    \item Creates simple bullet points, quick and straightforward
 \end{itemize}
-\subsubsection{Enumerate mit Parametern (Dank enumitem package)}
+\subsubsection{Enumerate with parameters (with the enumitem package)}
 \begin{enumerate}[label=\alph*)]
-    \item Erlaubt simple Konfigurierung der Durchlistung nach eigenen Wünschen
-    \item Im Zweifelsfall vermutlich das Beste
+    \item Allows simple configuration of enumeration symbols according to your needs
+    \item Probably the best choice in most cases
 \end{enumerate}
 
-\section{Extra Kosmetik}
-\subsection{Schriftarten}
-\subsubsection{Standard Varianten}
+\section{Additional Formatting}
+\subsection{Fonts}
+\subsubsection{Standard Variants}
 \begin{itemize}
-    \item \textbf{TextBF:} Einfach text markieren, Strg+B und der Text wird fett markiert
-    \item $\text{Mathmode: } \int_{0}^{\pi} \sin(x) \, dx = 2$ für jegliche mathematischen Zeichen ($\sum$) / Ausdrücke ($s_2$). Kann für Text entweder beendet oder mit dem text command unterbrochen werden
-    \item \texttt{TextTT:} Zum Beispiel praktisch für vorlesungsspezifische Definitionen
+    \item \textbf{TextBF:} Simply select text, press Ctrl+B, and the text will be bolded
+    \item $\text{Math mode: } \int_{0}^{\pi} \sin(x) \, dx = 2$ for all mathematical symbols ($\sum$) / expressions ($s_2$). Can be either closed or interrupted with the text command for text.
+    \item \texttt{TextTT:} For instance, useful for lecture-specific definitions
 \end{itemize}
-\subsection{Farben}
-Hierfür ist am besten das Xcolor package zu benutzen. Es können zusätzlich zu den Standard-Farben oder selbst definierten Farben (siehe Situational Definitions) auch spezifische RGB oder HTML Farben aufgerufen werden( [red] $\to$ [RGB]{255,0,0}). Sowohl für normalen Text als auch Mathmode benutzbar: \textcolor[RGB]{255,0,0}{Beispiel $s_{42}$}
+\subsection{Colors}
+For this, it is best to use the Xcolor package. In addition to standard colors or custom-defined colors (see Situational Definitions), specific RGB or HTML colors can be called ([red] $\to$ [RGB]{255,0,0}). Usable for both regular text and Math mode: \textcolor[RGB]{255,0,0}{Example $s_{42}$}
 \begin{itemize}
     \item \textcolor[RGB]{100,100,100}{Textcolor}
     \item \colorbox{codegreen}{Colorbox}
 \end{itemize}
 
-\section{Gleichungen}
-\subsection{simple Gleichung mit equation}
-Hier ist die simple Gleichung \ref{eq:amp}
+\section{Equations}
+\subsection{Simple Equation with equation}
+Here is the simple equation \ref{eq:amp}
 \begin{equation}
 \label{eq:amp}
  R_{17}=\frac{V_{MP58}\cdot (R_{17}+R_{65})}{V_{MP53}} = \frac{\SI{0.66}{\volt}\cdot (R_{17}+\SI{10}{\kilo\ohm})}{\SI{5}{\volt}}=\SI{1520.74}{\ohm}
 \end{equation}
-Hier ist eine mit Matrizen (siehe Gleichung \ref{eq:Matrizen}:
+Here is one with matrices (see equation \ref{eq:Matrices}):
 \begin{equation}
-\label{eq:Matrizen}
+\label{eq:Matrices}
 A_3*A_4=
     \left(\begin{array}{ccc}
          0&-1&-2\\
@@ -235,62 +235,62 @@ A_3*A_4=
          0 & -4
     \end{array}\right)
 \end{equation}
-\subsection{mehrzeilige Gleichungen mit align}
-Hier ist die mehrzeilige Gleichung \ref{eq:Spannungsteiler_PT1000} mit align
+\subsection{Multiline Equations with align}
+Here is the multiline equation \ref{eq:VoltageDivider_PT1000} with align
 \begin{align}
-\label{eq:Spannungsteiler_PT1000}
+\label{eq:VoltageDivider_PT1000}
     R_{17}&=\frac{(R_{73}+POT_1)\cdot(R_{17}+R_{65})}{R_{73}+POT_1+R_{64}}\\
     \equiv R_{17}&=\frac{(R_{73}+POT_1)\cdot R_{65}}{R_{64}}\\
     &=\frac{\SI{0.866}{\kilo\ohm}\cdot\SI{10}{\kilo\ohm}}{\SI{8.2}{\kilo\ohm}}=\SI{1056.1}{\ohm}
 \end{align}
-\subsection{vollständige Induktion}
+\subsection{Complete Induction}
 
-\section{Abbildungen}
-\subsection{simple Grafik}
-Hier ist die Grafik \ref{fig:Herbstfang}
+\section{Figures}
+\subsection{Simple Graphic}
+Here is the graphic \ref{fig:AutumnCatch}
 \noindent
 \FloatBarrier
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.4\textwidth]{Graphics/Herbstfang.jpg}
-    \caption{Irgendein Bild}
-    \label{fig:Herbstfang}
+    \caption{Some picture}
+    \label{fig:AutumnCatch}
 \end{figure}
 \FloatBarrier
 \noindent
-\subsection{mehrere Grafiken}
-Und hier sind noch die Grafiken \ref{fig:Herbstfang2}, \ref{fig:Herbstfang3} und \ref{fig:Herbstfang4}.
+\subsection{Multiple Graphics}
+And here are the graphics \ref{fig:AutumnCatch2}, \ref{fig:AutumnCatch3}, and \ref{fig:AutumnCatch4} using a minipage.
 \FloatBarrier
     \noindent
 \begin{figure}[H]
         \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
-  \caption{\cite{mylatex}\\Noch ein Bild}\label{fig:Herbstfang2}
+  \caption{\cite{mylatex}\\Another picture}\label{fig:AutumnCatch2}
 \endminipage\hfill
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
-  \caption{\cite{mylatex}\\Und noch ein Bild}\label{fig:Herbstfang3}
+  \caption{\cite{mylatex}\\Yet another picture}\label{fig:AutumnCatch3}
 \endminipage\hfill
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
-  \caption{\cite{mylatex}\\Und \textbf{noch} ein Bild}\label{fig:Herbstfang4}
+  \caption{\cite{mylatex}\\And \textbf{yet} another picture}\label{fig:AutumnCatch4}
 \endminipage
     \end{figure}
     \FloatBarrier
     \noindent
 
 \newpage
-\subsection{PDF Seite}
+\subsection{PDF Page}
 \begin{figure}[ht]
     \includepdf[pages=1, width=\textwidth]{Misc/Tangrami.pdf}
-    \caption{Irgendeine PDF Datei}
+    \caption{Some PDF file}
     \label{fig:Tangrami}
 \end{figure}
 \FloatBarrier
 \noindent
 \newpage
 
-\section{Tabellen}
+\section{Tables}
 \subsection{Random}
 \noindent
 \FloatBarrier
@@ -311,16 +311,16 @@ Und hier sind noch die Grafiken \ref{fig:Herbstfang2}, \ref{fig:Herbstfang3} und
     \label{tab:example}
 \end{table}
 \FloatBarrier
-\subsection{Wahrheitstabelle}
-Hier ist die Tabelle \ref{tab:IDK}
+\subsection{Truth Table}
+Here is the table \ref{tab:IDK}
 \noindent
 \FloatBarrier
 \begin{table}[ht]
     \centering
-    \caption{Logiktabelle}
+    \caption{Logic Table}
     \begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
         \emph{A} & \emph{B} & \emph{C} &  $\emph{D}=$ & ( & $\lnot$ & \emph{A} & $\land$ & $\lnot$ & \emph{C} & ) & $\lor$ & ( & $\lnot$ & \emph{B} & $\land$ & $\lnot$ & \emph{C} & ) & \\
-        \hline 
+        \hline
         1 & 1 & 1 &  &  & 0 & 1 & 0 & 0 & 1 &  & \textcolor{red}{0} &  & 0 & 1 & 0 & 0 & 1 &  & \\
         1 & 1 & 0 &  &  & 0 & 1 & 0 & 1 & 0 &  & \textcolor{red}{0} &  & 0 & 1 & 0 & 1 & 0 &  & \\
         1 & 0 & 1 &  &  & 0 & 1 & 0 & 0 & 1 &  & \textcolor{red}{0} &  & 1 & 0 & 0 & 0 & 1 &  & \\
@@ -333,13 +333,12 @@ Hier ist die Tabelle \ref{tab:IDK}
     \label{tab:IDK}
 \end{table}
 \FloatBarrier
-
-\section{Code-Listing}
-Hier ist ein Code Listing \ref{lst:example}
+\section{Code}
+Here is a code listing \ref{lst:example} using lstlisting.
 % example for a code-listing
 % Add \hspace{10cm} in front of the \begin if used in combination with \item
 % Add '\newpage' to the end of a line for a page break
-\begin{lstlisting}[language=C, caption={Beispielcode}, label=lst:example, breaklines=true, escapeinside='']
+\begin{lstlisting}[language=C, caption={Example Code}, label=lst:example, breaklines=true, escapeinside='']
 #include <stdio.h>
 
 int main() {
@@ -359,7 +358,7 @@ int main() {
 \end{align*}
 
 \section{Plots}
-\subsection{einfacher Plot}
+\subsection{Simple Plot}
 \noindent
 \FloatBarrier
 \begin{figure}[ht]
@@ -367,16 +366,17 @@ int main() {
         \begin{tikzpicture}
           \begin{axis}[ 
             xlabel=$x$,
-            ylabel={$f(x) = x^3 + sin(5x^2)$}
+            ylabel={$f(x) = x^3 + \sin(5x^2)$}
           ] 
             \addplot {x^3 + sin(5*x^2)}; 
           \end{axis}
         \end{tikzpicture}
-        \caption{Ein einfacher plot}
+        \caption{A simple plot}
         \label{fig:simpleplot}
-    \end{figure}
+\end{figure}
 \FloatBarrier
-\subsection{Ein einfacher 3D Plot}
+
+\subsection{A Simple 3D Plot}
 \noindent
 \FloatBarrier
 \begin{figure}[ht]
@@ -397,11 +397,11 @@ int main() {
             };
             \end{axis}
         \end{tikzpicture}
-        \caption{Ein 3D Plot}
+        \caption{A 3D plot}
         \label{plt:3dplot}
 \end{figure}
 
-\section{Manuell erstelltes Diagramm}
+\section{Manually Created Chart}
 \pgfplotstableread[row sep=\\,col sep=&]{
     interval & carT\\
     100     & 0\\
@@ -431,7 +431,7 @@ int main() {
                     nodes near coords,
                     nodes near coords align={vertical},
                     ymin=0,ymax=60,
-                    ylabel={number of artifacts},
+                    ylabel={Number of artifacts},
                     xlabel={RV},
                 ]
                 \addplot table[x=interval,y=carT]{\mydata};
@@ -440,9 +440,9 @@ int main() {
                 \legend{Artifacts}
             \end{axis}
         \end{tikzpicture}
-        \caption{Ein etwas weniger simpler plot} 
+        \caption{A slightly less simple plot} 
         \label{fig:notsimpleplot}
-    \end{figure}
+\end{figure}
 \FloatBarrier
 
 \section{Piechart}
@@ -458,15 +458,15 @@ int main() {
 \section{Controller}
 I pressed the \controllerbutton{A} button to confirm my choice. Then, I pressed the \controllerbutton{B} button to cancel the operation.
 
-\section{Zitate}
+\section{Citations}
 \subsection{Quotations}
 \subsubsection{Inline}
 I think \textquote{Never change a running system} is one of the worst takes I can think of.
-\subsection{Referenzierung}
+\subsection{Referencing}
 \cite{etechformelsammlung}
 \newpage
 
-\section{Externe Tools / Nützliche links}
+\section{External Tools / Useful Links}
 \begin{itemize}
     \item \href{https://detexify.kirelabs.org/classify.html}{Detexify - Find symbol command names by drawing them}
     \item \href{https://texample.net/tikz/examples/}{Tikz examples (categorized)}
@@ -479,3 +479,4 @@ I think \textquote{Never change a running system} is one of the worst takes I ca
 \newpage
 \printbibliography[heading=bibintoc] % if you have biblatex included
 \end{document}
+
