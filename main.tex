@@ -183,65 +183,65 @@ pdfkeywords={}]
 \subsection{Listings}
 \subsubsection{Itemize}
 \begin{itemize}
-    \item Creates simple bullet points, quick and straightforward
+	\item Creates simple bullet points, quick and straightforward
 \end{itemize}
 \subsubsection{Enumerate with parameters (with the enumitem package)}
 \begin{enumerate}[label=\alph*)]
-    \item Allows simple configuration of enumeration symbols according to your needs
-    \item Probably the best choice in most cases
+	\item Allows simple configuration of enumeration symbols according to your needs
+	\item Probably the best choice in most cases
 \end{enumerate}
 
 \section{Additional Formatting}
 \subsection{Fonts}
 \subsubsection{Standard Variants}
 \begin{itemize}
-    \item \textbf{TextBF:} Simply select text, press Ctrl+B, and the text will be bolded
-    \item $\text{Math mode: } \int_{0}^{\pi} \sin(x) \, dx = 2$ for all mathematical symbols ($\sum$) / expressions ($s_2$). Can be either closed or interrupted with the text command for text.
-    \item \texttt{TextTT:} For instance, useful for lecture-specific definitions
+	\item \textbf{TextBF:} Simply select text, press Ctrl+B, and the text will be bolded
+	\item $\text{Math mode: } \int_{0}^{\pi} \sin(x) \, dx = 2$ for all mathematical symbols ($\sum$) / expressions ($s_2$). Can be either closed or interrupted with the text command for text.
+	\item \texttt{TextTT:} For instance, useful for lecture-specific definitions
 \end{itemize}
 \subsection{Colors}
 For this, it is best to use the Xcolor package. In addition to standard colors or custom-defined colors (see Situational Definitions), specific RGB or HTML colors can be called ([red] $\to$ [RGB]{255,0,0}). Usable for both regular text and Math mode: \textcolor[RGB]{255,0,0}{Example $s_{42}$}
 \begin{itemize}
-    \item \textcolor[RGB]{100,100,100}{Textcolor}
-    \item \colorbox{codegreen}{Colorbox}
+	\item \textcolor[RGB]{100,100,100}{Textcolor}
+	\item \colorbox{codegreen}{Colorbox}
 \end{itemize}
 
 \section{Equations}
 \subsection{Simple Equation with equation}
 Here is the simple equation \ref{eq:amp}
 \begin{equation}
-\label{eq:amp}
- R_{17}=\frac{V_{MP58}\cdot (R_{17}+R_{65})}{V_{MP53}} = \frac{\SI{0.66}{\volt}\cdot (R_{17}+\SI{10}{\kilo\ohm})}{\SI{5}{\volt}}=\SI{1520.74}{\ohm}
+	\label{eq:amp}
+	R_{17}=\frac{V_{MP58}\cdot (R_{17}+R_{65})}{V_{MP53}} = \frac{\SI{0.66}{\volt}\cdot (R_{17}+\SI{10}{\kilo\ohm})}{\SI{5}{\volt}}=\SI{1520.74}{\ohm}
 \end{equation}
 Here is one with matrices (see equation \ref{eq:Matrices}):
 \begin{equation}
-\label{eq:Matrices}
-A_3*A_4=
-    \left(\begin{array}{ccc}
-         0&-1&-2\\
-         -1 & 0&1\\
-         2 & 1& 0
-    \end{array}\right)
-    *
-    \left(\begin{array}{cc}
-         1 & -1\\
-         -2 &2\\
-         3 & -1
-    \end{array}\right)
-    =
-    \left(\begin{array}{cc}
-         -4 & 0\\
-         2 & 2\\
-         0 & -4
-    \end{array}\right)
+	\label{eq:Matrices}
+	A_3*A_4=
+	\left(\begin{array}{ccc}
+			0  & -1 & -2 \\
+			-1 & 0  & 1  \\
+			2  & 1  & 0
+		\end{array}\right)
+	*
+	\left(\begin{array}{cc}
+			1  & -1 \\
+			-2 & 2  \\
+			3  & -1
+		\end{array}\right)
+	=
+	\left(\begin{array}{cc}
+			-4 & 0  \\
+			2  & 2  \\
+			0  & -4
+		\end{array}\right)
 \end{equation}
 \subsection{Multiline Equations with align}
 Here is the multiline equation \ref{eq:VoltageDivider_PT1000} with align
 \begin{align}
-\label{eq:VoltageDivider_PT1000}
-    R_{17}&=\frac{(R_{73}+POT_1)\cdot(R_{17}+R_{65})}{R_{73}+POT_1+R_{64}}\\
-    \equiv R_{17}&=\frac{(R_{73}+POT_1)\cdot R_{65}}{R_{64}}\\
-    &=\frac{\SI{0.866}{\kilo\ohm}\cdot\SI{10}{\kilo\ohm}}{\SI{8.2}{\kilo\ohm}}=\SI{1056.1}{\ohm}
+	\label{eq:VoltageDivider_PT1000}
+	R_{17}        & =\frac{(R_{73}+POT_1)\cdot(R_{17}+R_{65})}{R_{73}+POT_1+R_{64}}                             \\
+	\equiv R_{17} & =\frac{(R_{73}+POT_1)\cdot R_{65}}{R_{64}}                                                  \\
+	              & =\frac{\SI{0.866}{\kilo\ohm}\cdot\SI{10}{\kilo\ohm}}{\SI{8.2}{\kilo\ohm}}=\SI{1056.1}{\ohm}
 \end{align}
 \subsection{Complete Induction}
 
@@ -251,40 +251,40 @@ Here is the graphic \ref{fig:AutumnCatch}
 \noindent
 \FloatBarrier
 \begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.4\textwidth]{Graphics/Herbstfang.jpg}
-    \caption{Some picture}
-    \label{fig:AutumnCatch}
+	\centering
+	\includegraphics[width=0.4\textwidth]{Graphics/Herbstfang.jpg}
+	\caption{Some picture}
+	\label{fig:AutumnCatch}
 \end{figure}
 \FloatBarrier
 \noindent
 \subsection{Multiple Graphics}
 And here are the graphics \ref{fig:AutumnCatch2}, \ref{fig:AutumnCatch3}, and \ref{fig:AutumnCatch4} using a minipage.
 \FloatBarrier
-    \noindent
+\noindent
 \begin{figure}[H]
-        \minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
-  \caption{\cite{mylatex}\\Another picture}\label{fig:AutumnCatch2}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
-  \caption{\cite{mylatex}\\Yet another picture}\label{fig:AutumnCatch3}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
-  \caption{\cite{mylatex}\\And \textbf{yet} another picture}\label{fig:AutumnCatch4}
-\endminipage
-    \end{figure}
-    \FloatBarrier
-    \noindent
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
+	\caption{\cite{mylatex}\\Another picture}\label{fig:AutumnCatch2}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
+	\caption{\cite{mylatex}\\Yet another picture}\label{fig:AutumnCatch3}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}%
+	\includegraphics[width=\linewidth]{Graphics/Herbstfang.jpg}
+	\caption{\cite{mylatex}\\And \textbf{yet} another picture}\label{fig:AutumnCatch4}
+	\endminipage
+\end{figure}
+\FloatBarrier
+\noindent
 
 \newpage
 \subsection{PDF Page}
 \begin{figure}[ht]
-    \includepdf[pages=1, width=\textwidth]{Misc/Tangrami.pdf}
-    \caption{Some PDF file}
-    \label{fig:Tangrami}
+	\includepdf[pages=1, width=\textwidth]{Misc/Tangrami.pdf}
+	\caption{Some PDF file}
+	\label{fig:Tangrami}
 \end{figure}
 \FloatBarrier
 \noindent
@@ -295,20 +295,20 @@ And here are the graphics \ref{fig:AutumnCatch2}, \ref{fig:AutumnCatch3}, and \r
 \noindent
 \FloatBarrier
 \begin{table}[htbp]
-    \centering
-    \caption{Example table with fixed and variable column widths}
-    \begin{tabular}{|>{\centering\arraybackslash}p{2cm}|c|c|p{3cm}|}
-        \hline
-        \multicolumn{2}{|c|}{\textbf{Fixed Width}} & \multicolumn{2}{c|}{\textbf{Variable Width}} \\
-        \hline
-        \textbf{Col 1} & \textbf{Col 2} & \textbf{Col 3} & \textbf{Col 4} \\
-        \hline
-        Row 1 & Content & Content & Some long content that wraps within the specified width \\
-        \hline
-        Row 2 & Content & Content & Some long content that wraps within the specified width \\
-        \hline
-    \end{tabular}
-    \label{tab:example}
+	\centering
+	\caption{Example table with fixed and variable column widths}
+	\begin{tabular}{|>{\centering\arraybackslash}p{2cm}|c|c|p{3cm}|}
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Fixed Width}} & \multicolumn{2}{c|}{\textbf{Variable Width}}                                                                            \\
+		\hline
+		\textbf{Col 1}                             & \textbf{Col 2}                               & \textbf{Col 3} & \textbf{Col 4}                                          \\
+		\hline
+		Row 1                                      & Content                                      & Content        & Some long content that wraps within the specified width \\
+		\hline
+		Row 2                                      & Content                                      & Content        & Some long content that wraps within the specified width \\
+		\hline
+	\end{tabular}
+	\label{tab:example}
 \end{table}
 \FloatBarrier
 \subsection{Truth Table}
@@ -316,21 +316,21 @@ Here is the table \ref{tab:IDK}
 \noindent
 \FloatBarrier
 \begin{table}[ht]
-    \centering
-    \caption{Logic Table}
-    \begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
-        \emph{A} & \emph{B} & \emph{C} &  $\emph{D}=$ & ( & $\lnot$ & \emph{A} & $\land$ & $\lnot$ & \emph{C} & ) & $\lor$ & ( & $\lnot$ & \emph{B} & $\land$ & $\lnot$ & \emph{C} & ) & \\
-        \hline
-        1 & 1 & 1 &  &  & 0 & 1 & 0 & 0 & 1 &  & \textcolor{red}{0} &  & 0 & 1 & 0 & 0 & 1 &  & \\
-        1 & 1 & 0 &  &  & 0 & 1 & 0 & 1 & 0 &  & \textcolor{red}{0} &  & 0 & 1 & 0 & 1 & 0 &  & \\
-        1 & 0 & 1 &  &  & 0 & 1 & 0 & 0 & 1 &  & \textcolor{red}{0} &  & 1 & 0 & 0 & 0 & 1 &  & \\
-        1 & 0 & 0 &  &  & 0 & 1 & 0 & 1 & 0 &  & \textcolor{red}{1} &  & 1 & 0 & 1 & 1 & 0 &  & \\
-        0 & 1 & 1 &  &  & 1 & 0 & 0 & 0 & 1 &  & \textcolor{red}{0} &  & 0 & 1 & 0 & 0 & 1 &  & \\
-        0 & 1 & 0 &  &  & 1 & 0 & 1 & 1 & 0 &  & \textcolor{red}{1} &  & 0 & 1 & 0 & 1 & 0 &  & \\
-        0 & 0 & 1 &  &  & 1 & 0 & 0 & 0 & 1 &  & \textcolor{red}{0} &  & 1 & 0 & 0 & 0 & 1 &  & \\
-        0 & 0 & 0 &  &  & 1 & 0 & 1 & 1 & 0 &  & \textcolor{red}{1} &  & 1 & 0 & 1 & 1 & 0 &  & \\
-    \end{tabular}
-    \label{tab:IDK}
+	\centering
+	\caption{Logic Table}
+	\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+		\emph{A} & \emph{B} & \emph{C} & $\emph{D}=$ & ( & $\lnot$ & \emph{A} & $\land$ & $\lnot$ & \emph{C} & ) & $\lor$             & ( & $\lnot$ & \emph{B} & $\land$ & $\lnot$ & \emph{C} & ) & \\
+		\hline
+		1        & 1        & 1        &             &   & 0       & 1        & 0       & 0       & 1        &   & \textcolor{red}{0} &   & 0       & 1        & 0       & 0       & 1        &   & \\
+		1        & 1        & 0        &             &   & 0       & 1        & 0       & 1       & 0        &   & \textcolor{red}{0} &   & 0       & 1        & 0       & 1       & 0        &   & \\
+		1        & 0        & 1        &             &   & 0       & 1        & 0       & 0       & 1        &   & \textcolor{red}{0} &   & 1       & 0        & 0       & 0       & 1        &   & \\
+		1        & 0        & 0        &             &   & 0       & 1        & 0       & 1       & 0        &   & \textcolor{red}{1} &   & 1       & 0        & 1       & 1       & 0        &   & \\
+		0        & 1        & 1        &             &   & 1       & 0        & 0       & 0       & 1        &   & \textcolor{red}{0} &   & 0       & 1        & 0       & 0       & 1        &   & \\
+		0        & 1        & 0        &             &   & 1       & 0        & 1       & 1       & 0        &   & \textcolor{red}{1} &   & 0       & 1        & 0       & 1       & 0        &   & \\
+		0        & 0        & 1        &             &   & 1       & 0        & 0       & 0       & 1        &   & \textcolor{red}{0} &   & 1       & 0        & 0       & 0       & 1        &   & \\
+		0        & 0        & 0        &             &   & 1       & 0        & 1       & 1       & 0        &   & \textcolor{red}{1} &   & 1       & 0        & 1       & 1       & 0        &   & \\
+	\end{tabular}
+	\label{tab:IDK}
 \end{table}
 \FloatBarrier
 \section{Code}
@@ -349,12 +349,12 @@ int main() {
 
 \section{Idk}
 \begin{align*}
-    z_0*/z_1*/z_2*/mreq + z_0*/z_1*/z_2*/a_{31} + /z_0*/z_1*z_2*/mreq + /z_0*z_1*z_2*/mreq = z_0' \\
-    z_0*/z_1*/z_2*mreq*mw*a31 + /z_0*z_1*/z_2 + /z_0*z_1*z_2*mreq = z_1' \\
-    /z_0*/z_1*z_2*mreq + /z_0*z_1*/z_2 + /z_0*z_1*z_2*mreq + /z_0*z_1*/z_2 = z_2' \\
-    /z_0*z_1*/z_2+/z_0*z_1*/z_2 = /SMack \\
-    /z_0*z_1*/z_2+/z_0*/z_1*z_2 = /SDdoe \\
-    /z_0*z_1*/z_2 = /SMw
+	z_0*/z_1*/z_2*/mreq + z_0*/z_1*/z_2*/a_{31} + /z_0*/z_1*z_2*/mreq + /z_0*z_1*z_2*/mreq = z_0' \\
+	z_0*/z_1*/z_2*mreq*mw*a31 + /z_0*z_1*/z_2 + /z_0*z_1*z_2*mreq = z_1'                          \\
+	/z_0*/z_1*z_2*mreq + /z_0*z_1*/z_2 + /z_0*z_1*z_2*mreq + /z_0*z_1*/z_2 = z_2'                 \\
+	/z_0*z_1*/z_2+/z_0*z_1*/z_2 = /SMack                                                          \\
+	/z_0*z_1*/z_2+/z_0*/z_1*z_2 = /SDdoe                                                          \\
+	/z_0*z_1*/z_2 = /SMw
 \end{align*}
 
 \section{Plots}
@@ -362,17 +362,17 @@ int main() {
 \noindent
 \FloatBarrier
 \begin{figure}[ht]
-        \centering
-        \begin{tikzpicture}
-          \begin{axis}[ 
-            xlabel=$x$,
-            ylabel={$f(x) = x^3 + \sin(5x^2)$}
-          ] 
-            \addplot {x^3 + sin(5*x^2)}; 
-          \end{axis}
-        \end{tikzpicture}
-        \caption{A simple plot}
-        \label{fig:simpleplot}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				xlabel=$x$,
+				ylabel={$f(x) = x^3 + \sin(5x^2)$}
+			]
+			\addplot {x^3 + sin(5*x^2)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{A simple plot}
+	\label{fig:simpleplot}
 \end{figure}
 \FloatBarrier
 
@@ -380,79 +380,79 @@ int main() {
 \noindent
 \FloatBarrier
 \begin{figure}[ht]
-        \centering
-        \begin{tikzpicture}
-            \begin{axis}[ 
-            xlabel=$x$,
-            ylabel=$y$,
-            zlabel=$z$
-            ] 
-            \addplot3 coordinates 
-            {
-                (0,0,1)
-                (0,1,0)
-                (0,0,-1)
-                (0,-1,0)
-                (1,0,0)
-            };
-            \end{axis}
-        \end{tikzpicture}
-        \caption{A 3D plot}
-        \label{plt:3dplot}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				xlabel=$x$,
+				ylabel=$y$,
+				zlabel=$z$
+			]
+			\addplot3 coordinates
+				{
+					(0,0,1)
+					(0,1,0)
+					(0,0,-1)
+					(0,-1,0)
+					(1,0,0)
+				};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{A 3D plot}
+	\label{plt:3dplot}
 \end{figure}
 
 \section{Manually Created Chart}
 \pgfplotstableread[row sep=\\,col sep=&]{
-    interval & carT\\
-    100     & 0\\
-    200     & 2\\
-    300    & 5\\
-    400   & 35\\
-    500   & 40\\
-    600     & 45\\
-    700     & 25\\
-    800     & 15\\
-    900     & 0\\
-    }\mydata
+	interval & carT\\
+	100     & 0\\
+	200     & 2\\
+	300    & 5\\
+	400   & 35\\
+	500   & 40\\
+	600     & 45\\
+	700     & 25\\
+	800     & 15\\
+	900     & 0\\
+}\mydata
 \noindent
 \FloatBarrier
 \begin{figure}[ht]
-        \centering
-        \begin{tikzpicture}
-            \begin{axis}[
-                    ybar,
-                    bar width=.5cm,
-                    width=\textwidth,
-                    height=.5\textwidth,
-                    legend style={at={(0.5,1)},
-                        anchor=north,legend columns=-1},
-                    symbolic x coords={100,200,300,400,500,600,700,800,900,},
-                    xtick=data,
-                    nodes near coords,
-                    nodes near coords align={vertical},
-                    ymin=0,ymax=60,
-                    ylabel={Number of artifacts},
-                    xlabel={RV},
-                ]
-                \addplot table[x=interval,y=carT]{\mydata};
-                %\addplot table[x=interval,y=carD]{\mydata};
-                %\addplot table[x=interval,y=carR]{\mydata};
-                \legend{Artifacts}
-            \end{axis}
-        \end{tikzpicture}
-        \caption{A slightly less simple plot} 
-        \label{fig:notsimpleplot}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				ybar,
+				bar width=.5cm,
+				width=\textwidth,
+				height=.5\textwidth,
+				legend style={at={(0.5,1)},
+						anchor=north,legend columns=-1},
+				symbolic x coords={100,200,300,400,500,600,700,800,900,},
+				xtick=data,
+				nodes near coords,
+				nodes near coords align={vertical},
+				ymin=0,ymax=60,
+				ylabel={Number of artifacts},
+				xlabel={RV},
+			]
+			\addplot table[x=interval,y=carT]{\mydata};
+			%\addplot table[x=interval,y=carD]{\mydata};
+			%\addplot table[x=interval,y=carR]{\mydata};
+			\legend{Artifacts}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{A slightly less simple plot}
+	\label{fig:notsimpleplot}
 \end{figure}
 \FloatBarrier
 
 \section{Piechart}
 \begin{tikzpicture}
-\pie{22.97/Los Angeles Lakers,
-    22.97/Boston Celtics,
-    8.11/Golden State Warriors,
-    8.11/Chicago Bulls,
-    6.76/San Antonio Spurs,
-    31.07/Other Teams}
+	\pie{22.97/Los Angeles Lakers,
+		22.97/Boston Celtics,
+		8.11/Golden State Warriors,
+		8.11/Chicago Bulls,
+		6.76/San Antonio Spurs,
+		31.07/Other Teams}
 \end{tikzpicture}
 
 \section{Controller}
@@ -468,12 +468,12 @@ I think \textquote{Never change a running system} is one of the worst takes I ca
 
 \section{External Tools / Useful Links}
 \begin{itemize}
-    \item \href{https://detexify.kirelabs.org/classify.html}{Detexify - Find symbol command names by drawing them}
-    \item \href{https://texample.net/tikz/examples/}{Tikz examples (categorized)}
-    \item \href{https://www.bibtex.com/e/entry-types/}{Bibtex entry types}
-    \item \href{https://latexdraw.com/three-dimensional-plotting-in-latex/}{Complex 3D plotting}
-    \item \href{https://mirror.informatik.hs-fulda.de/tex-archive/info/lshort/english/lshort.pdf}{The not so short Introduction to \LaTeX}
-    \item \href{https://en.wikibooks.org/wiki/LaTeX}{Where to find even more references}
+	\item \href{https://detexify.kirelabs.org/classify.html}{Detexify - Find symbol command names by drawing them}
+	\item \href{https://texample.net/tikz/examples/}{Tikz examples (categorized)}
+	\item \href{https://www.bibtex.com/e/entry-types/}{Bibtex entry types}
+	\item \href{https://latexdraw.com/three-dimensional-plotting-in-latex/}{Complex 3D plotting}
+	\item \href{https://mirror.informatik.hs-fulda.de/tex-archive/info/lshort/english/lshort.pdf}{The not so short Introduction to \LaTeX}
+	\item \href{https://en.wikibooks.org/wiki/LaTeX}{Where to find even more references}
 \end{itemize}
 
 \newpage
