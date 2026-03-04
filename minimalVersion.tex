@@ -1,0 +1,68 @@
+\documentclass[a4paper, 11pt]{article}
+
+% --------------------------------------------------------------------------
+% Packages
+% --------------------------------------------------------------------------
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% --------------------------------------------------------------------------
+% Document metadata — fill these in
+% --------------------------------------------------------------------------
+\newcommand{\studentone}{Firstname Lastname}
+\newcommand{\studentoneid}{1234567}
+\newcommand{\studenttwo}{Firstname Lastname}
+\newcommand{\studenttwoid}{1234567}
+\newcommand{\exercisenumber}{X}
+\newcommand{\coursetitle}{Some random lecture}
+\newcommand{\duedate}{\today}
+
+% --------------------------------------------------------------------------
+% Header / Footer (fancyhdr)
+% --------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+
+% Header: names + IDs on the left | exercise number in center | date on the right
+\lhead{%
+    \studentone~\studentoneid\\
+    \studenttwo~\studenttwoid%
+}
+\chead{Exercise \exercisenumber}
+\rhead{\duedate}
+
+% Footer: page number centered
+\cfoot{Page \thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Increase header height to accommodate two lines
+\setlength{\headheight}{24pt}
+
+% --------------------------------------------------------------------------
+% Theorem environments
+% --------------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+% --------------------------------------------------------------------------
+% Document
+% --------------------------------------------------------------------------
+\begin{document}
+
+\section*{Task 1}
+  ...
+
+\end{document}
