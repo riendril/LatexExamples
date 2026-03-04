@@ -1,0 +1,75 @@
+# Set default indentation to 2 spaces
+defaultIndent: "  "
+
+# Verbatim environments that should not be modified
+verbatimEnvironments:
+  verbatim: 1
+  lstlisting: 1
+
+# Configure indentation after section commands TODO: add \if... as heading with level 0
+indentAfterHeadings:
+  chapter:
+    indentAfterThisHeading: 0 # no indent after chapter
+    level: 1
+  section:
+    indentAfterThisHeading: 1 # indent after section
+    level: 2
+  subsection:
+    indentAfterThisHeading: 1 # indent after subsection
+    level: 3
+  subsubsection:
+    indentAfterThisHeading: 1 # indent after subsubsection
+    level: 4
+  paragraph:
+    indentAfterThisHeading: 1 # indent after paragraph
+    level: 5
+
+# Configure global environment behavior for proper nesting
+noAdditionalIndentGlobal:
+  environments: 0 # ensures environments get indented
+
+# Customize indentation for specific environments and commands
+indentRules:
+  chapter: "" # no additional indent for chapter
+  document: "" # no additional indent for document
+  section: "  " # explicitly set 2-space indent for sections
+
+# Set environment indentation to match the surrounding level
+indentRulesGlobal:
+  environments: "  " # 2 spaces
+  mandatoryArguments: "  " # 2 spaces for mandatory arguments
+  optionalArguments: "  " # 2 spaces for optional arguments
+  items: "  " # 2 spaces for items
+  afterHeading: "  " # explicitly set 2-space indent after headings
+
+# Line breaking configuration
+modifyLineBreaks:
+  preserveBlankLines: 1
+  condenseMultipleBlankLinesInto: 1
+
+  # Environment line break settings
+  environments:
+    BeginStartsOnOwnLine: 1
+    EndStartsOnOwnLine: 1
+    EndFinishesWithLineBreak: 1
+
+  # Text wrapping settings TODO: Preserve coded line breaks and line breaks after sentences
+  textWrapOptions:
+    columns: 80 # wrap at 80 columns
+    when: after # wrap after indentation is applied
+    removeBlockLineBreaks: 1 # remove existing line breaks in blocks
+    multipleSpacesToSingle: 1 # condense multiple spaces
+    sentenceIndent: "" # no extra indent for sentences
+    huge: overflow # prevent mid-word line breaks
+    comments: # TODO: activate wrap when removeBlockLineBreaks can be turned off for comments
+      wrap: 0 # do not wrap comments since removeBlockLineBreaks cant be separately specified as of V3.16
+      removeBlockLineBreaks: 0 # keep existing line breaks in comment blocks, DOES NOT GET RECOGNIZED
+      inheritLeadingSpace: 1 # keep comment indentation
+
+  # Item settings
+  items:
+    ItemStartsOnOwnLine: 1 # \item always starts on new line
+
+  # Label handling
+  mandatoryArguments:
+    RCuBFinishesWithLineBreak: 0 # prevent line break after label
